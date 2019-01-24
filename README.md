@@ -1,29 +1,39 @@
-# microblog-frontend
+# Microblog (frontend)
 
-## Project setup
+## Описание
+
+Микроблог, повторяющий идеи Twitter.
+
+**Single Page Application** для работы с API - https://github.com/poymanov/microblog-api
+
+## Установка
+
+- Расположить проект в необходимой директории
+- В консоли перейти в директорию проекта
+- Выполнить:
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## Настройка
+
+В корне директории проекта создать файл `.env.local`.
+
+В нём необходимо задать адрес по которому будет доступно API:
+```
+VUE_APP_API_URL=http://microblog-api.test/api/
+```
+
+## Запуск
+
+- В консоли перейти в директорию проекта
+- Выполнить:
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Проект будет запущен локально и доступен по адресу http://localhost:8080/
 
-### Run your tests
-```
-npm run test
-```
+## Цели проекта
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Код создан в учебных целях.
