@@ -31,8 +31,29 @@ VUE_APP_API_URL=http://microblog-api.test/api/
 ```
 npm run serve
 ```
-
 Проект будет запущен локально и доступен по адресу http://localhost:8080/
+
+## Деплой
+
+- Разместить проект в необходимой директории на сервере
+- Задать адрес API в `.env.local`
+- Выполнить консольную команду:
+```
+npm run build
+```
+- Настроить nginx. Примерная конфигурация:
+```
+server {
+  server_name microblog-frontend.test;
+  root /path/to/microblog-frontend/dist;
+
+  index index.html index.htm;
+
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+}
+```
 
 ## Цели проекта
 
