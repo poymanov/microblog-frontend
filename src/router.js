@@ -14,6 +14,16 @@ const redirectIfAuth = (to, from, next) => {
   }
 };
 
+const redirectIfGuest = (to, from, next) => {
+  // Если нет токена доступа,
+  // переадресовать пользователя на главную страницу
+  if (localStorage.getItem('accessToken')) {
+    next();
+  } else {
+    next('/login');
+  }
+};
+
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
@@ -34,6 +44,12 @@ export default new Router({
       name: 'login',
       component: () => import('./components/auth/Login.vue'),
       beforeEnter: redirectIfAuth
+    },
+    {
+      path: '/newPost',
+      name: 'newPost',
+      component: () => import('./components/NewPost.vue'),
+      beforeEnter: redirectIfGuest
     },
   ],
 });

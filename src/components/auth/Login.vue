@@ -22,10 +22,10 @@
 
 <script>
   import axios from 'axios';
-  import authMixin from './authMixin';
+  import formMixin from '../mixins/formMixin';
 
   export default {
-    mixins: [authMixin],
+    mixins: [formMixin],
     data() {
       return {
         email: '',

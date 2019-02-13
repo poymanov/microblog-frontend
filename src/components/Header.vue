@@ -16,6 +16,9 @@
         <router-link to="/login" tag="li" class="nav-item" active-class="active" v-if="!auth">
           <a class="nav-link">Login</a>
         </router-link>
+        <router-link to="/newPost" tag="li" class="nav-item" active-class="active" v-if="auth">
+          <a class="nav-link">New Post</a>
+        </router-link>
         <li class="nav-item" v-if="auth">
           <a href="#" class="nav-link" @click="onLogout">Logout</a>
         </li>

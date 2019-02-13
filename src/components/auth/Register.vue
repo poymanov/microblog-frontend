@@ -32,10 +32,10 @@
 <script>
   import axios from 'axios';
   import router from '../../router';
-  import authMixin from './authMixin';
+  import formMixin from '../mixins/formMixin';
 
   export default {
-    mixins: [authMixin],
+    mixins: [formMixin],
     data() {
       return {
         name: '',
