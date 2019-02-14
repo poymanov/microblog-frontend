@@ -51,5 +51,10 @@ export default new Router({
       component: () => import('./components/NewPost.vue'),
       beforeEnter: redirectIfGuest
     },
+    {
+      path: '/user/:id',
+      name: 'user',
+      component: () => import('./components/user/User.vue'),
+    },
   ],
 });
